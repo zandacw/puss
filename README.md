@@ -10,7 +10,8 @@ Puss is a simple command-line utility that integrates GNU Pass and a fuzzy finde
 
 ## Requirements
 
-- GNU Pass (`pass`)
+- [GNU Pass](https://www.passwordstore.org)
+- [Pass OTP](https://github.com/tadfisher/pass-otp) (not required)
 
 ## Installation
 
@@ -25,6 +26,16 @@ Puss is a simple command-line utility that integrates GNU Pass and a fuzzy finde
     ```bash
     go install
 
+## Usage
+
+1. Ensure your .password-store directory is properly set up and contains your encrypted passwords.
+
+2. Run the command
+
+   ```bash
+   puss
+
+3. Use the Fuzzy Finder to select a password. The selected password will be copied to your clipboard, and if an OTP is available, it will be displayed.
 
 ## License
 This project is licensed under the MIT License. See the LICENSE file for details.
