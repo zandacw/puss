@@ -36,6 +36,7 @@ func listPasswords() ([]string, error) {
 func copyPassword(path string) error {
 	res, err := runCommand("pass", "show", path, "-c")
 	if err != nil {
+		fmt.Println("ERROR: your GPG key used for GNU pass may be locked. Unlock and try again")
 		return err
 	} else if !strings.Contains(res, "Copied") {
 		return errors.New("ERROR: failed to copy")
